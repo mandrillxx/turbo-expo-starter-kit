@@ -1,81 +1,140 @@
-# Turborepo starter
+# 🚀 Full-Stack Turborepo Starter
 
-This is an official starter Turborepo.
+A modern, feature-rich monorepo starter template built with Turborepo, combining a React Native mobile app with a type-safe backend.
 
-## Using this example
+## ✨ Features
 
-Run the following command:
+- 📱 **Mobile App** - React Native with Expo SDK 52
+- 🔒 **Authentication** - Secure auth flow using Better-Auth
+- 🎯 **Type Safety** - End-to-end typesafe APIs with tRPC
+- 📦 **Database** - Type-safe ORM with Drizzle
+- 🎨 **UI Components** - Shared UI library for consistent design
+- 🚄 **Fast API** - Lightweight Hono server
+- ⚡️ **Performance** - Turborepo for optimal build performance
 
-```sh
-npx create-turbo@latest
+## 📦 What's Inside?
+
+### Apps
+
+- `mobile`: React Native app built with Expo
+- `api`: Backend API server using Hono
+
+### Packages
+
+- `@repo/auth`: Authentication utilities and hooks
+- `@repo/db`: Database schema and Drizzle ORM setup
+- `@repo/trpc`: tRPC router definitions and procedures
+- `@repo/ui`: Shared React Native components
+- `@repo/eslint-config`: Shared ESLint configurations
+- `@repo/typescript-config`: Shared TypeScript configurations
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/username/your-repo-name.git
+cd your-repo-name
 ```
 
-## What's inside?
+2. Install dependencies:
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+pnpm install
 ```
 
-### Develop
+3. Set up your environment variables:
 
-To develop all apps and packages, run the following command:
-
+```bash
+cp .env.example .env
 ```
-cd my-turborepo
+
+4. Start the development servers:
+
+```bash
+# Start all applications
 pnpm dev
 ```
 
-### Remote Caching
+## 📱 Mobile Development
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+The mobile app is built with Expo. To run it:
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+1. Install Expo Go on your device
+2. Start the mobile app:
+
+```bash
+pnpm dev
+```
+3. Scan the QR code with Expo Go (Android) or Camera app (iOS)
+
+## 🛠 Development Tools
+
+This Turborepo includes:
+
+- 🔍 **TypeScript** for static type checking
+- 📝 **ESLint** for code linting
+- 💅 **Prettier** for code formatting
+- 🧪 **Testing Library** for component testing
+- 📱 **Expo** for mobile development
+- 🔄 **tRPC** for type-safe APIs
+
+## 📚 Useful Commands
+
+```bash
+# Build all applications and packages
+pnpm build
+
+# Run development servers
+pnpm dev
+
+# Lint all projects
+pnpm lint
+
+# Run tests
+pnpm test
+
+# Clean all builds
+pnpm clean
+```
+
+## 🏗 Project Structure
 
 ```
-cd my-turborepo
-npx turbo login
+.
+├── apps
+│   ├── mobile          # React Native mobile app
+│   └── api             # Hono API server
+├── packages
+│   ├── auth           # Authentication package
+│   ├── db             # Database package
+│   ├── trpc           # tRPC package
+│   └── ui             # Shared UI components
+└── package.json
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## 🔐 Authentication
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+This template uses Better-Auth for secure authentication, supporting:
 
-```
-npx turbo link
-```
+- 🔑 Email/Password authentication
+- 🌐 OAuth providers (Google, GitHub, etc.)
+- 📱 Mobile-specific auth flows
+- 🔒 Secure session management
 
-## Useful Links
+## 📖 Documentation
 
-Learn more about the power of Turborepo:
+For more detailed documentation:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Mobile App](./apps/mobile/README.md)
+- [API Server](./apps/api/README.md)
+- [Authentication](./packages/auth/README.md)
+- [Database](./packages/db/README.md)
+
+## 📝 License
+
+MIT
+
+---
+
+Built with ❤️ using [Turborepo](https://turbo.build/repo)
