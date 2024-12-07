@@ -1,4 +1,4 @@
-import { Slot, SplashScreen, Stack } from "expo-router";
+import { Slot, SplashScreen } from "expo-router";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { NAV_THEME } from "@/lib/constants";
@@ -65,7 +65,6 @@ export default function RootLayout() {
         return;
       }
       setIsColorSchemeLoaded(true);
-      SplashScreen.hideAsync();
     }
 
     loadColorScheme();
