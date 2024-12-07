@@ -1,0 +1,22 @@
+{
+  "name": "@repo/tailwind",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": {
+    ".": "./tailwind.config.ts",
+    "./postcss.config.mjs": "./postcss.config.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules pnpm-lock.yaml",
+    "lint": "biome check .",
+    "format": "biome --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/typescript": "workspace:*",
+    "tailwindcss": "^3.4.16"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}

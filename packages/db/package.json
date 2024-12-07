@@ -1,0 +1,33 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules dist pnpm-lock.yaml",
+    "db:seed": "npx tsx --env-file=../../.env src/scripts/seed.ts",
+    "db:truncate": "npx tsx --env-file=../../.env src/scripts/truncate.ts",
+    "db:push": "dotenv -e .env -- drizzle-kit push",
+    "db:generate": "dotenv -e .env -- drizzle-kit generate",
+    "db:migrate": "dotenv -e .env -- drizzle-kit migrate"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./env": "./src/env.ts",
+    "./query": "./src/query/index.ts",
+    "./mutation": "./src/mutation/index.ts",
+    "./zod": "./src/zod.ts"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.11.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@repo/typescript": "workspace:*",
+    "drizzle-kit": "^0.28.1"
+  }
+}

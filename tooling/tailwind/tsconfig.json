@@ -1,0 +1,9 @@
+{
+  "extends": "@repo/typescript/base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "../../../"
+  },
+  "include": ["tailwind.config.ts", "postcss.config.mjs"],
+  "exclude": ["node_modules", "dist"]
+}
