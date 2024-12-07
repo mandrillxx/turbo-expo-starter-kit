@@ -25,7 +25,7 @@ importers:
     dependencies:
       '@hono/trpc-server':
         specifier: ^0.3.4
-        version: 0.3.4(@trpc/server@11.0.0-rc.657(typescript@5.7.2))(hono@4.6.13)
+        version: 0.3.4(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(hono@4.6.13)
       '@repo/auth':
         specifier: workspace:*
         version: link:../../packages/auth
@@ -34,7 +34,7 @@ importers:
         version: link:../../packages/trpc
       '@trpc/server':
         specifier: next
-        version: 11.0.0-rc.657(typescript@5.7.2)
+        version: 11.0.0-rc.657(typescript@5.5.4)
       hono:
         specifier: ^4.6.13
         version: 4.6.13
@@ -77,7 +77,7 @@ importers:
         version: 5.62.3(react@18.3.1)
       '@trpc/react-query':
         specifier: next
-        version: 11.0.0-rc.657(@tanstack/react-query@5.62.3(react@18.3.1))(@trpc/client@10.45.2(@trpc/server@11.0.0-rc.657(typescript@5.5.4)))(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(react-dom@19.0.0(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
+        version: 11.0.0-rc.657(@tanstack/react-query@5.62.3(react@18.3.1))(@trpc/client@11.0.0-rc.657(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(typescript@5.5.4))(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(react-dom@19.0.0(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       '@trpc/server':
         specifier: next
         version: 11.0.0-rc.657(typescript@5.5.4)
@@ -165,7 +165,7 @@ importers:
         version: link:../db
       '@t3-oss/env-core':
         specifier: ^0.11.1
-        version: 0.11.1(typescript@5.7.2)(zod@3.23.8)
+        version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
       better-call:
         specifier: ^0.3.2
         version: 0.3.2
@@ -193,7 +193,7 @@ importers:
     dependencies:
       '@t3-oss/env-core':
         specifier: ^0.11.1
-        version: 0.11.1(typescript@5.7.2)(zod@3.23.8)
+        version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -298,8 +298,8 @@ importers:
 
 packages:
 
-  '@0no-co/graphql.web@1.0.11':
-    resolution: {integrity: sha512-xuSJ9WXwTmtngWkbdEoopMo6F8NLtjy84UNAMsAr5C3/2SgAL/dEU10TMqTIsipqPQ8HA/7WzeqQ9DEQxSvPPA==}
+  '@0no-co/graphql.web@1.0.12':
+    resolution: {integrity: sha512-BTDjjsV/zSPy5fqItwm+KWUfh9CSe9tTtR6rCB72ddtkAxdcHbi4Ir4r/L1Et4lyxmL+i7Rb3m9sjLLi9tYrzA==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
     peerDependenciesMeta:
@@ -2086,10 +2086,11 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
-  '@trpc/client@10.45.2':
-    resolution: {integrity: sha512-ykALM5kYWTLn1zYuUOZ2cPWlVfrXhc18HzBDyRhoPYN0jey4iQHEFSEowfnhg1RvYnrAVjNBgHNeSAXjrDbGwg==}
+  '@trpc/client@11.0.0-rc.657':
+    resolution: {integrity: sha512-8NKwucdXH9KN5TTPxBRn/OL+RlNpJTov+6UV55IEhjqqMJCn4PIKM0HKyFC8QzDK0lOqvtPUm+FX+Svuf0KttA==}
     peerDependencies:
-      '@trpc/server': 10.45.2
+      '@trpc/server': 11.0.0-rc.657+7a369faa3
+      typescript: '>=5.6.2'
 
   '@trpc/react-query@11.0.0-rc.657':
     resolution: {integrity: sha512-nZiH2xHY/NGfD8ql1muVuUicIZmistGXTStwRYrv6yCI4Lf1tSkKwzJKhHddCQf+ch7vA9B26FkL0cxV1JZpCg==}
@@ -5088,11 +5089,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.7.2:
-    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   ua-parser-js@1.0.39:
     resolution: {integrity: sha512-k24RCVWlEcjkdOxYmVJgeD/0a1TiSpqLg+ZalVGV9lsnr4yqu0w7tX/x2xX6G4zpkgQnRf89lxuZ1wsbjXM8lw==}
     hasBin: true
@@ -5378,7 +5374,7 @@ packages:
 
 snapshots:
 
-  '@0no-co/graphql.web@1.0.11': {}
+  '@0no-co/graphql.web@1.0.12': {}
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -6461,7 +6457,7 @@ snapshots:
 
   '@expo/cli@0.22.3':
     dependencies:
-      '@0no-co/graphql.web': 1.0.11
+      '@0no-co/graphql.web': 1.0.12
       '@babel/runtime': 7.26.0
       '@expo/code-signing-certificates': 0.0.5
       '@expo/config': 10.0.6
@@ -6756,9 +6752,9 @@ snapshots:
 
   '@hexagon/base64@1.1.28': {}
 
-  '@hono/trpc-server@0.3.4(@trpc/server@11.0.0-rc.657(typescript@5.7.2))(hono@4.6.13)':
+  '@hono/trpc-server@0.3.4(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(hono@4.6.13)':
     dependencies:
-      '@trpc/server': 11.0.0-rc.657(typescript@5.7.2)
+      '@trpc/server': 11.0.0-rc.657(typescript@5.5.4)
       hono: 4.6.13
 
   '@img/sharp-darwin-arm64@0.33.5':
@@ -7471,12 +7467,6 @@ snapshots:
     optionalDependencies:
       typescript: 5.5.4
 
-  '@t3-oss/env-core@0.11.1(typescript@5.7.2)(zod@3.23.8)':
-    dependencies:
-      zod: 3.23.8
-    optionalDependencies:
-      typescript: 5.7.2
-
   '@tanstack/query-core@5.62.3': {}
 
   '@tanstack/react-query@5.62.3(react@18.3.1)':
@@ -7484,14 +7474,15 @@ snapshots:
       '@tanstack/query-core': 5.62.3
       react: 18.3.1
 
-  '@trpc/client@10.45.2(@trpc/server@11.0.0-rc.657(typescript@5.5.4))':
+  '@trpc/client@11.0.0-rc.657(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(typescript@5.5.4)':
     dependencies:
       '@trpc/server': 11.0.0-rc.657(typescript@5.5.4)
+      typescript: 5.5.4
 
-  '@trpc/react-query@11.0.0-rc.657(@tanstack/react-query@5.62.3(react@18.3.1))(@trpc/client@10.45.2(@trpc/server@11.0.0-rc.657(typescript@5.5.4)))(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(react-dom@19.0.0(react@18.3.1))(react@18.3.1)(typescript@5.5.4)':
+  '@trpc/react-query@11.0.0-rc.657(@tanstack/react-query@5.62.3(react@18.3.1))(@trpc/client@11.0.0-rc.657(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(typescript@5.5.4))(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(react-dom@19.0.0(react@18.3.1))(react@18.3.1)(typescript@5.5.4)':
     dependencies:
       '@tanstack/react-query': 5.62.3(react@18.3.1)
-      '@trpc/client': 10.45.2(@trpc/server@11.0.0-rc.657(typescript@5.5.4))
+      '@trpc/client': 11.0.0-rc.657(@trpc/server@11.0.0-rc.657(typescript@5.5.4))(typescript@5.5.4)
       '@trpc/server': 11.0.0-rc.657(typescript@5.5.4)
       react: 18.3.1
       react-dom: 19.0.0(react@18.3.1)
@@ -7500,10 +7491,6 @@ snapshots:
   '@trpc/server@11.0.0-rc.657(typescript@5.5.4)':
     dependencies:
       typescript: 5.5.4
-
-  '@trpc/server@11.0.0-rc.657(typescript@5.7.2)':
-    dependencies:
-      typescript: 5.7.2
 
   '@tybys/wasm-util@0.8.3':
     dependencies:
@@ -7582,7 +7569,7 @@ snapshots:
 
   '@types/ws@8.5.13':
     dependencies:
-      '@types/node': 20.17.9
+      '@types/node': 20.12.14
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -7592,7 +7579,7 @@ snapshots:
 
   '@urql/core@5.0.8':
     dependencies:
-      '@0no-co/graphql.web': 1.0.11
+      '@0no-co/graphql.web': 1.0.12
       wonka: 6.3.4
     transitivePeerDependencies:
       - graphql
@@ -10692,8 +10679,6 @@ snapshots:
   type-fest@0.7.1: {}
 
   typescript@5.5.4: {}
-
-  typescript@5.7.2: {}
 
   ua-parser-js@1.0.39: {}
 

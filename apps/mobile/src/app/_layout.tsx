@@ -6,9 +6,9 @@ import { type Theme, ThemeProvider } from "@react-navigation/native";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import "../global.css";
 import { TRPCReactProvider } from "@/lib/trpc/react";
 import { AuthProvider } from "@/lib/auth/auth-provider";
+import "../global.css";
 
 const fonts: Theme["fonts"] = {
   regular: {

@@ -9,6 +9,7 @@ A modern, feature-rich monorepo starter template built with Turborepo, combining
 - 🎯 **Type Safety** - End-to-end typesafe APIs with tRPC
 - 📦 **Database** - Type-safe ORM with Drizzle
 - 🎨 **UI Components** - Shared UI library for consistent design
+- 🚄� **Styling** - Tailwind CSS for React Native with NativeWind
 - 🚄 **Fast API** - Lightweight Hono server
 - ⚡️ **Performance** - Turborepo for optimal build performance
 
@@ -25,16 +26,15 @@ A modern, feature-rich monorepo starter template built with Turborepo, combining
 - `@repo/db`: Database schema and Drizzle ORM setup
 - `@repo/trpc`: tRPC router definitions and procedures
 - `@repo/ui`: Shared React Native components
-- `@repo/eslint-config`: Shared ESLint configurations
-- `@repo/typescript-config`: Shared TypeScript configurations
+- `@repo/typescript`: Shared TypeScript configurations
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/mandrillxx/turbo-expo-starter-kit.git
+cd turbo-expo-starter-kit
 ```
 
 2. Install dependencies:
@@ -60,13 +60,16 @@ pnpm dev
 
 The mobile app is built with Expo. To run it:
 
-1. Install Expo Go on your device
-2. Start the mobile app:
+1. Build development app with eas
+```bash
+eas build --platform ios --profile development
+```
+2. Start the mobile app dev server:
 
 ```bash
 pnpm dev
 ```
-3. Scan the QR code with Expo Go (Android) or Camera app (iOS)
+3. Scan the QR code with Camera app (iOS)
 
 ## 🛠 Development Tools
 
@@ -78,6 +81,7 @@ This Turborepo includes:
 - 🧪 **Testing Library** for component testing
 - 📱 **Expo** for mobile development
 - 🔄 **tRPC** for type-safe APIs
+- 🎨 **NativeWind** for Tailwind CSS styling in React Native
 
 ## 📚 Useful Commands
 
@@ -90,9 +94,6 @@ pnpm dev
 
 # Lint all projects
 pnpm lint
-
-# Run tests
-pnpm test
 
 # Clean all builds
 pnpm clean
@@ -115,21 +116,12 @@ pnpm clean
 
 ## 🔐 Authentication
 
-This template uses Better-Auth for secure authentication, supporting:
+This template uses [Better-Auth](https://www.better-auth.com) for secure authentication, supporting:
 
 - 🔑 Email/Password authentication
 - 🌐 OAuth providers (Google, GitHub, etc.)
 - 📱 Mobile-specific auth flows
 - 🔒 Secure session management
-
-## 📖 Documentation
-
-For more detailed documentation:
-
-- [Mobile App](./apps/mobile/README.md)
-- [API Server](./apps/api/README.md)
-- [Authentication](./packages/auth/README.md)
-- [Database](./packages/db/README.md)
 
 ## 📝 License
 

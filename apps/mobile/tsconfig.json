@@ -3,27 +3,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ],
-      "react": [
-        "./node_modules/@types/react"
-      ]
+      "@/*": ["./src/*"],
+      "@/assets/*": ["./assets/*"],
+      "react": ["./node_modules/@types/react"]
     },
     "strict": true,
     "jsx": "react-native",
-    "types": [
-      "nativewind/types"
-    ],
+    "types": ["nativewind/types", "node"],
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2022"
-    ],
+    "lib": ["dom", "dom.iterable", "es2022"],
     "skipLibCheck": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -41,9 +29,5 @@
     "nativewind-env.d.ts",
     "drizzle.config.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "dist"
-  ]
+  "exclude": ["node_modules", "build", "dist"]
 }

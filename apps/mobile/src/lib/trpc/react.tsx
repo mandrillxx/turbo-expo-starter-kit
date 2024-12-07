@@ -1,8 +1,7 @@
-import { useSession } from "@/store";
 import type { AppRouter } from "@repo/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createTRPCReact, httpBatchLink, loggerLink } from "@trpc/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import superjson from "superjson";
 import { authClient } from "../auth";
 
@@ -32,12 +31,11 @@ export function TRPCReactProvider(props: { children: React.ReactNode }) {
           url: `${process.env.EXPO_PUBLIC_API_URL}/trpc`,
           transformer: superjson,
           headers() {
-            const headers: Record<string, string> = {
-              "x-trpc-source": "expo-react",
-            };
+            const headers = new Headers();
+            headers.set("x-trpc-source", "expo-react");
             const cookies = authClient.getCookie();
             if (cookies) {
-              headers.Cookie = cookies;
+              headers.set("Cookie", cookies);
             }
             return headers;
           },

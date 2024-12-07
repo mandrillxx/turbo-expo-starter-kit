@@ -53,7 +53,6 @@ export const useAuth = () => {
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const router = useRouter();
-  const segments = useSegments();
   const [initialized, setInitialized] = useState(false);
   const setSession = useStore((state) => state.setSession);
   const session = authClient.useSession();
@@ -78,7 +77,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   async function signInWithGoogle() {
     const res = await authClient.signIn.social({
       provider: "google",
-      callbackURL: "garange://",
+      callbackURL: "hotshotqq://",
     });
     return res.error;
   }
@@ -103,7 +102,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
   }
 
   useEffect(() => {
-    console.log(JSON.stringify(session, null, 2));
     if (!session.isPending) {
       setSession(session.data ?? null);
       setInitialized(true);
